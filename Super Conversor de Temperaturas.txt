@@ -1,0 +1,58 @@
+﻿using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Ativando UTF-8 para emojis e símbolo de grau
+        Console.OutputEncoding = System.Text.Encoding.UTF8;
+
+        Console.WriteLine("🌡️ --- Conversor de Temperatura --- 🌡️");
+        Console.Write("Digite a temperatura: ");
+
+        if (float.TryParse(Console.ReadLine(), out float valor))
+        {
+            Console.Write("Digite a unidade (C, F ou K): ");
+            string unidade = Console.ReadLine().ToUpper();
+
+            if (unidade == "C")
+            {
+                float f = (valor * 9 / 5) + 32;
+                float k = valor + 273.15f;
+
+                Console.WriteLine($"\n✅ Resultados para {valor:F2}°C:");
+                Console.WriteLine($"🔥 Fahrenheit: {f:F2}°F");
+                Console.WriteLine($"🧊 Kelvin: {k:F2}K");
+            }
+            else if (unidade == "F")
+            {
+                float c = (valor - 32) * 5 / 9;
+                float k = c + 273.15f;
+
+                Console.WriteLine($"\n✅ Resultados para {valor:F2}°F:");
+                Console.WriteLine($"❄️ Celsius: {c:F2}°C");
+                Console.WriteLine($"🧊 Kelvin: {k:F2}K");
+            }
+            else if (unidade == "K")
+            {
+                float c = valor - 273.15f;
+                float f = (valor - 273.15f) * 9 / 5 + 32;
+
+                Console.WriteLine($"\n✅ Resultados para {valor:F2}K:");
+                Console.WriteLine($"❄️ Celsius: {c:F2}°C");
+                Console.WriteLine($"🔥 Fahrenheit: {f:F2}°F");
+            }
+            else
+            {
+                Console.WriteLine("❌ Unidade inválida! Use apenas C, F ou K.");
+            }
+        }
+        else
+        {
+            Console.WriteLine("❌ Erro: Digite apenas números!");
+        }
+
+        Console.WriteLine("\nPressione qualquer tecla para sair...");
+        Console.ReadKey();
+    }
+}

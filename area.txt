@@ -1,0 +1,48 @@
+﻿using System;
+
+class Program
+{
+    static void Main()
+    {
+        // TRIÂNGULO
+        Console.Write("Digite o lado: ");
+        double lado = double.Parse(Console.ReadLine());
+
+        double area = (Math.Sqrt(3) / 4) * (lado * lado);
+        Console.WriteLine("Área = " + area);
+
+        // VILÃO
+        double forca = 0;
+
+        for (int i = 1; i <= 3; i++)
+        {
+            Console.Write("Digite a força: ");
+            forca = double.Parse(Console.ReadLine());
+        }
+
+        double resultado = Math.Pow(forca, 3);
+
+        if (resultado > 400)
+            Console.WriteLine("Você venceu!");
+        else
+            Console.WriteLine("Você perdeu!");
+
+        // MENU
+        Console.Write("Digite uma opção (1 a 9): ");
+        int op = int.Parse(Console.ReadLine());
+
+        switch (op)
+        {
+            case 1: Console.WriteLine("Euglenófitas"); break;
+            case 2: Console.WriteLine("Clorófitas"); break;
+            case 3: Console.WriteLine("Bacilariofitas"); break;
+            case 4: Console.WriteLine("Rodófitas"); break;
+            case 5: Console.WriteLine("Pirrófitas"); break;
+            case 6: Console.WriteLine("Amebas"); break;
+            case 7: Console.WriteLine("Toxoplasma"); break;
+            case 8: Console.WriteLine("Filariose"); break;
+            case 9: Console.WriteLine("Tripomastigotas"); break;
+            default: Console.WriteLine("Opção inválida"); break;
+        }
+    }
+}

@@ -1,0 +1,92 @@
+﻿using System;
+
+class Program
+{
+    static void Main()
+    {
+        // =============================
+        // 🧵 DADOS DO HERÓI
+        // =============================
+
+        string nomeHeroi = "Luna";
+        var tituloHeroi = "A Caçadora das Sombras";
+
+        // =============================
+        // 🔢 OPERAÇÕES MATEMÁTICAS
+        // =============================
+
+        // ➕ Soma (Ataque Total)
+        int ataqueBase = 45;
+        int bonusArma = 20;
+        int ataqueTotal = ataqueBase + bonusArma;
+
+        // ➖ Subtração (Dano causado)
+        double vidaInimigo = 200.0;
+        double danoCausado = 75.5;
+        double vidaRestante = vidaInimigo - danoCausado;
+
+        // ✖ Multiplicação (Moedas com bônus)
+        float moedas = 80.5f;
+        float moedasComBonus = moedas * 2;
+
+        // ➗ Divisão (Média de XP)
+        long xpTotal = 12000000000;
+        long mediaXpPorNivel = xpTotal / 2;
+
+        // =============================
+        // 📊 STATUS DO HERÓI
+        // =============================
+
+        Console.WriteLine("=========================================");
+        Console.WriteLine("           STATUS DO HERÓI");
+        Console.WriteLine("=========================================");
+        Console.WriteLine("Nome: " + nomeHeroi);
+        Console.WriteLine("Título: " + tituloHeroi);
+        Console.WriteLine("Ataque Base: " + ataqueBase);
+        Console.WriteLine("Bônus da Arma: " + bonusArma);
+        Console.WriteLine("Ataque Total (45 + 20): " + ataqueTotal);
+        Console.WriteLine("Vida do Inimigo (200 - 75.5): " + vidaRestante);
+        Console.WriteLine("Moedas com bônus (80.5 x 2): " + moedasComBonus);
+        Console.WriteLine("Média de XP (12000000000 / 2): " + mediaXpPorNivel);
+
+        Console.WriteLine("\n\n=========================================");
+        Console.WriteLine("              HISTÓRIA ÉPICA");
+        Console.WriteLine("=========================================\n");
+
+        // =============================
+        // 📖 HISTÓRIA LONGA
+        // =============================
+
+        Console.WriteLine("Nas antigas terras de Valoria, onde montanhas tocam as nuvens");
+        Console.WriteLine("e florestas escondem criaturas sombrias, uma heroína se destaca.");
+        Console.WriteLine("Seu nome é " + nomeHeroi + ", conhecida como \"" + tituloHeroi + "\".\n");
+
+        Console.WriteLine("Desde jovem, Luna treinou incansavelmente.");
+        Console.WriteLine("Seu ataque base de " + ataqueBase + " já era impressionante,");
+        Console.WriteLine("mas ao empunhar sua arma encantada, recebeu mais " + bonusArma + " pontos de poder.");
+
+        Console.WriteLine("\nNa batalha decisiva contra a criatura das trevas,");
+        Console.WriteLine("seu poder total atingiu " + ataqueTotal + " pontos.");
+        Console.WriteLine("O impacto foi tão forte que ecoou por todo o vale.");
+
+        Console.WriteLine("\nO inimigo possuía " + vidaInimigo + " pontos de vida.");
+        Console.WriteLine("Após receber " + danoCausado + " de dano direto,");
+        Console.WriteLine("restaram apenas " + vidaRestante + " pontos.");
+        Console.WriteLine("A criatura cambaleou, enfraquecida e dominada pelo medo.");
+
+        Console.WriteLine("\nCom um movimento final preciso e calculado,");
+        Console.WriteLine("Luna encerrou a batalha, restaurando a paz temporária ao reino.");
+
+        Console.WriteLine("\nComo recompensa, ela recebeu " + moedasComBonus + " moedas de ouro,");
+        Console.WriteLine("o dobro do que normalmente ganharia, graças ao bônus de vitória.");
+
+        Console.WriteLine("\nSua experiência acumulada chegou a " + xpTotal + " pontos.");
+        Console.WriteLine("Dividindo esse valor, sua média por nível é de " + mediaXpPorNivel + " XP.");
+
+        Console.WriteLine("\nOs bardos agora cantam sobre sua coragem.");
+        Console.WriteLine("Seu nome ecoa nas tavernas, nos castelos e nos campos de batalha.");
+        Console.WriteLine("E enquanto houver sombras no mundo...");
+        Console.WriteLine(nomeHeroi + " continuará lutando.");
+        Console.ReadKey();  
+    }
+}

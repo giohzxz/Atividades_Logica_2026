@@ -1,0 +1,28 @@
+﻿using System.Reflection.Metadata.Ecma335;
+
+Console.OutputEncoding = System.Text.Encoding.UTF8;
+Console.WriteLine("Cálculo de IMC");
+
+Console.Write("Digite o Peso: ");
+float.TryParse(Console.ReadLine().Replace(".", ","), out float peso);
+
+Console.Write("Digite o Altura: ");
+float.TryParse(Console.ReadLine().Replace(".", ","), out float altura);
+
+float imc = peso / (altura * altura);
+
+string classificacao;
+
+if (imc < 18.5f)
+    classificacao = "Magreza";
+else if (imc < 25f)
+    classificacao = "Normal";
+else if (imc < 30f)
+    classificacao = "Sobrepeso";
+else if (imc < 40f)
+    classificacao = "Obesidade";
+else
+    classificacao = "Obesidade Grave";
+
+Console.WriteLine($"IMC = {Math.Round(imc, 2)}");
+Console.WriteLine($"Classificação: {classificacao}"); 

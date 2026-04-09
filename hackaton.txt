@@ -1,0 +1,29 @@
+﻿using System;
+class Program
+{
+    static void Main()
+    {
+        Console.OutputEncoding = System.Text.Encoding.UTF8;
+
+        int palpite = 0;
+        Random random = new Random();
+        int numeroSecreto = random.Next(1, 11);
+
+        Console.WriteLine("Na entrada do prédio do SESI Osasco tem uma porta automática com senha secreta. A senha é um número aleatório de 1 a 10. Caso você acerte o número, a porta abre; se errar, ela se mantém fechada.");
+        Console.WriteLine("=== JOGO: ADIVINHE O NÚMERO ===");
+        Console.WriteLine("Tente adivinhar o número de 1 a 10");
+
+        Console.Write("Digite seu palpite: ");
+        int.TryParse(Console.ReadLine(), out palpite);
+
+        if (palpite == numeroSecreto)
+        {
+            Console.WriteLine("🎉 Parabéns! Você acertou!");
+        }
+        else
+        {
+            Console.WriteLine("❌ Você errou!");
+            Console.WriteLine("O número secreto era: " + numeroSecreto);
+        }
+    }
+}
